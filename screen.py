@@ -18,3 +18,6 @@ def draw_grass():
         screen.blit(consts.GRASS, (x,y))
         pygame.display.update()
 
+def draw_night_window():
+    screen.fill(consts.BACKGROUND_WHEN_ENTER)
+    pygame.display.update()
