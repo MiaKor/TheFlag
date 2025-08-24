@@ -22,7 +22,7 @@ SNAKE = pygame.image.load(os.path.join('bin','snake.png'))
 GRASS = pygame.image.load(os.path.join('bin','grass.png'))
 SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 
-pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
+GRASS=pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
 
 REGULAR_BACKGROUND = (138, 201, 38)
 BACKGROUND_WHEN_ENTER = (0, 0, 0)
