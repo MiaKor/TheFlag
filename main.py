@@ -5,12 +5,12 @@ import game_field
 import soldier
 
 
-def handle_user_events():
+def handle_user_events(state,run):
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
             run = False
-        elif  != consts.RUNNING_STATE:
+        elif state != consts.RUNNING_STATE:
             continue
         if event.type == pygame.K_UP:
             pass
@@ -29,7 +29,7 @@ def main():
     state=consts.RUNNING_STATE
     run = True
     while run:
-        handle_user_events()
+        handle_user_events(state,run)
         screen.draw_window()
     if is_lose():
         state= consts.LOSE_STATE
