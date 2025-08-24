@@ -21,3 +21,6 @@ SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 REGULAR_BACKGROUND = (138, 201, 38)
 BACKGROUND_WHEN_ENTER = (0, 0, 0)
 LIGHT_GREEN = (144, 238, 144)
+RUNNING_STATE = 1
+LOSE_STATE = 2
+WIN_STATE = 3
