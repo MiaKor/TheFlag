@@ -4,6 +4,8 @@ pygame.init()
 
 SCREEN_GRID_START_ROWS = 25
 SCREEN_GRID_COLS = 50
+WINDOW_HEIGHT = 750
+WINDOW_WIDTH=1000
 
 SOLDIER = pygame.image.load('soldier.png')
 SOLDIER_NIGHT = pygame.image.load('soldier_night.png')
