@@ -4,12 +4,28 @@ import screen
 import game_field
 import soldier
 
+state = {"state": consts.RUNNING_STATE, "is_window_open": True}
 
-def handle_user_events(state,run):
+
+def main():
+    pygame.init()
+
+    while state["is_window_open"]:
+        handle_user_events()
+        screen.draw_window()
+        screen.draw_grass()
+        if is_lose():
+            state["state"] = consts.LOSE_STATE
+        elif is_win():
+            state["state"] = consts.WIN_STATE
+
+
+
+def handle_user_events():
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
-            run = False
+            state["is_window_open"] = False
         elif state != consts.RUNNING_STATE:
             continue
         if event.type == pygame.K_UP:
@@ -24,23 +40,13 @@ def handle_user_events(state,run):
             pass
 
 
-def main():
-    pygame.init()
-    state=consts.RUNNING_STATE
-    run = True
-    while run:
-        handle_user_events(state,run)
-        screen.draw_window()
-        if is_lose():
-            state= consts.LOSE_STATE
-        elif is_win():
-            state= consts.WIN_STATE
-
-
 def is_lose():
     pass
+
+
 def is_win():
     pass
+
 
 if __name__ == '__main__':
     main()
