@@ -4,4 +4,3 @@ import pygame
 pygame.init()
 screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 
-pygame.quit()
