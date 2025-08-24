@@ -20,4 +20,8 @@ def draw_grass():
 
 def draw_night_window():
     screen.fill(consts.BACKGROUND_WHEN_ENTER)
+    for i in range(consts.SCREEN_GRID_COLS):
+        pygame.draw.line(screen, consts.LIGHT_GREEN,(i,0) ,(i,consts.SCREEN_GRID_COLS) )
+    for j in range(consts.SCREEN_GRID_START_ROWS):
+        pygame.draw.line(screen, consts.LIGHT_GREEN, (j, 0),(j, consts.SCREEN_GRID_START_ROWS))
     pygame.display.update()
