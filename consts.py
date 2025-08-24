@@ -9,8 +9,8 @@ WINDOW_HEIGHT = 750
 WINDOW_WIDTH=1500
 
 BUSHES_AMOUNT= 20
-BUSH_HEIGHT=30
-BUSH_WIDTH=30
+BUSH_HEIGHT=50
+BUSH_WIDTH=50
 
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
@@ -24,7 +24,9 @@ SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 
 GRASS=pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
 
-REGULAR_BACKGROUND = (138, 201, 38)
+# REGULAR_BACKGROUND = (138, 201, 38)
+REGULAR_BACKGROUND = (255, 255, 255)
+
 BACKGROUND_WHEN_ENTER = (0, 0, 0)
 LIGHT_GREEN = (144, 238, 144)
 RUNNING_STATE = 1

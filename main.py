@@ -10,14 +10,16 @@ state = {"state": consts.RUNNING_STATE, "is_window_open": True}
 def main():
     pygame.init()
 
+    screen.draw_window()
+    screen.draw_grass()
     while state["is_window_open"]:
         handle_user_events()
-        screen.draw_window()
-        screen.draw_grass()
+
         if is_lose():
             state["state"] = consts.LOSE_STATE
         elif is_win():
             state["state"] = consts.WIN_STATE
+
 
 
 
