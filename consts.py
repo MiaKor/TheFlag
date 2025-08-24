@@ -12,6 +12,10 @@ BUSHES_AMOUNT= 20
 BUSH_HEIGHT=50
 BUSH_WIDTH=50
 
+MINE_AMOUNT = 20
+MINE_HEIGHT = 30
+MINE_WIDTH = 90
+
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
 FLAG = pygame.image.load(os.path.join('bin','flag.png'))
