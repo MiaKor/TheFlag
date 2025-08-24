@@ -5,24 +5,29 @@ import game_field
 import soldier
 
 
-def handle_user_events(run):
-    while run:
-        for event in pygame.event.get():
+def handle_user_events():
+    for event in pygame.event.get():
 
-            if event.type == pygame.QUIT:
-                run = False
-
-            if event.type == pygame.MOUSEMOTION:
-                pass
-
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                pass
+        if event.type == pygame.QUIT:
+            run = False
+        if event.type == pygame.K_UP:
+            pass
+        elif event.type == pygame.K_DOWN:
+            pass
+        elif event.type == pygame.K_RIGHT:
+            pass
+        elif event.type == pygame.K_LEFT:
+            pass
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            pass
 
 
 def main():
     pygame.init()
     run = True
-    handle_user_events(run)
+    while run:
+        handle_user_events()
+        screen.draw_window()
 
 
 if __name__ == '__main__':
