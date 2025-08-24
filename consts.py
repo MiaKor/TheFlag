@@ -9,6 +9,8 @@ WINDOW_HEIGHT = 750
 WINDOW_WIDTH=1500
 
 BUSHES_AMOUNT= 20
+BUSH_HEIGHT=30
+BUSH_WIDTH=30
 
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
