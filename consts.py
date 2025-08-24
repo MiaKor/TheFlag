@@ -8,6 +8,8 @@ SCREEN_GRID_COLS = 50
 WINDOW_HEIGHT = 750
 WINDOW_WIDTH=1500
 
+BUSHES_AMOUNT= 20
+
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
 FLAG = pygame.image.load(os.path.join('bin','flag.png'))
