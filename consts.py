@@ -16,8 +16,8 @@ MINE_AMOUNT = 20
 MINE_HEIGHT = 30
 MINE_WIDTH = 90
 
-SOLDIER_HEIGHT=50
-SOLDIER_WIDTH=50
+SOLDIER_HEIGHT=120
+SOLDIER_WIDTH=100
 
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
