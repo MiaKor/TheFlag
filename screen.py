@@ -13,8 +13,8 @@ def draw_window():
 
 def draw_grass():
     for i in range(consts.BUSHES_AMOUNT):
-        x = random.randint(0,consts.WINDOW_WIDTH)
-        y = random.randint(0,consts.WINDOW_HEIGHT)
+        x = random.randint(0,consts.WINDOW_WIDTH-50)
+        y = random.randint(0,consts.WINDOW_HEIGHT-50)
         screen.blit(consts.GRASS, (x,y))
         pygame.display.update()
 
