@@ -16,6 +16,9 @@ MINE_AMOUNT = 20
 MINE_HEIGHT = 30
 MINE_WIDTH = 90
 
+SOLDIER_HEIGHT=50
+SOLDIER_WIDTH=50
+
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
 SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
 FLAG = pygame.image.load(os.path.join('bin','flag.png'))
@@ -27,6 +30,7 @@ GRASS = pygame.image.load(os.path.join('bin','grass.png'))
 SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 
 GRASS=pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
+SOLDIER=pygame.transform.scale(SOLDIER,(SOLDIER_WIDTH,SOLDIER_HEIGHT))
 
 REGULAR_BACKGROUND = (0, 77, 0)
 # REGULAR_BACKGROUND = (255, 255, 255)

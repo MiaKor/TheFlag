@@ -9,8 +9,8 @@ state = {"state": consts.RUNNING_STATE, "is_window_open": True}
 
 def main():
     pygame.init()
-
-    screen.draw_window()
+    screen.draw_night_window()
+    # screen.draw_window()
     screen.draw_grass()
     while state["is_window_open"]:
         handle_user_events()
@@ -38,8 +38,8 @@ def handle_user_events():
             pass
         elif event.type == pygame.K_LEFT:
             pass
-        elif event.type == pygame.MOUSEBUTTONDOWN:
-            pass
+        elif event.type == pygame.K_KP_ENTER:
+            screen.draw_night_window()
 
 
 def is_lose():
