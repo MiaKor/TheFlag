@@ -1,3 +1,5 @@
+from symtable import Class
+
 import consts
 import pygame
 import random
@@ -8,3 +10,9 @@ screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 def draw_window():
     screen.fill(consts.REGULAR_BACKGROUND)
     pygame.display.update()
+
+def draw_grass():
+    for i in range(consts.BUSHES_AMOUNT):
+        x = random.randint(0,consts.SCREEN_GRID_START_ROWS)
+        y = random.randint(0,consts.SCREEN_GRID_COLS)
+        screen.blit(consts.GRASS, (x,y))
