@@ -15,7 +15,7 @@ EXPLOSION = pygame.image.load(os.path.join('bin','explotion.png'))
 MINE = pygame.image.load(os.path.join('bin','mine.png'))
 INJURY = pygame.image.load(os.path.join('bin','injury.png'))
 SNAKE = pygame.image.load(os.path.join('bin','snake.png'))
-GRASS = pygame.image.load(os.path.join('bin','grass'))
+GRASS = pygame.image.load(os.path.join('bin','grass.png'))
 SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 
 REGULAR_BACKGROUND = (138, 201, 38)
