@@ -9,7 +9,7 @@ WINDOW_HEIGHT = 750
 WINDOW_WIDTH=1500
 
 SOLDIER = pygame.image.load(os.path.join('bin','soldier.png'))
-SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_night.png'))
+SOLDIER_NIGHT = pygame.image.load(os.path.join('bin','soldier_nigth.png'))
 FLAG = pygame.image.load(os.path.join('bin','flag.png'))
 EXPLOSION = pygame.image.load(os.path.join('bin','explotion.png'))
 MINE = pygame.image.load(os.path.join('bin','mine.png'))
