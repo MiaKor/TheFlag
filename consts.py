@@ -24,8 +24,8 @@ SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 
 GRASS=pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
 
-# REGULAR_BACKGROUND = (138, 201, 38)
-REGULAR_BACKGROUND = (255, 255, 255)
+REGULAR_BACKGROUND = (0, 77, 0)
+# REGULAR_BACKGROUND = (255, 255, 255)
 
 BACKGROUND_WHEN_ENTER = (0, 0, 0)
 LIGHT_GREEN = (144, 238, 144)
