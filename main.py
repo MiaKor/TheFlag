@@ -31,10 +31,10 @@ def main():
     while run:
         handle_user_events(state,run)
         screen.draw_window()
-    if is_lose():
-        state= consts.LOSE_STATE
-    elif is_win():
-        state= consts.WIN_STATE
+        if is_lose():
+            state= consts.LOSE_STATE
+        elif is_win():
+            state= consts.WIN_STATE
 
 
 def is_lose():
