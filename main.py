@@ -3,28 +3,33 @@ import consts
 import screen
 import game_field
 import soldier
+import time
 
 state = {"state": consts.RUNNING_STATE, "is_window_open": True, 'night': False}
 
 
 def main():
     pygame.init()
-
-    screen.draw_window()
-    screen.draw_grass()
-    screen.draw_solider()
-    screen.draw_flag()
+    draw_board()
     while state["is_window_open"]:
+
         handle_user_events()
         if state['night']:
             screen.draw_night_window()
-            continue
+            time.sleep(1)
+            state['night']=False
+            draw_board()
 
         if is_lose():
             state["state"] = consts.LOSE_STATE
         elif is_win():
             state["state"] = consts.WIN_STATE
 
+def draw_board():
+    screen.draw_window()
+    screen.draw_grass()
+    screen.draw_solider()
+    screen.draw_flag()
 
 def handle_user_events():
     for event in pygame.event.get():
