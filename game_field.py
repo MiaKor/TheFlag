@@ -20,8 +20,6 @@ def randon_mines(game_filed):
         x = random.randint(0, consts.SCREEN_GRID_START_ROWS-1)
         y = random.randint(0, consts.SCREEN_GRID_COLS-1)
         tuple_list.append((x,y))
-
-
     return tuple_list
 
     #    g = create_field()
