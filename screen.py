@@ -1,6 +1,7 @@
 import consts
 import pygame
 import random
+import game_field
 
 import game_field
 

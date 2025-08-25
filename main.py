@@ -12,21 +12,32 @@ def main():
     pygame.init()
     clock = pygame.time.Clock()
     draw_board()
-    # soldier.soldier()
     pygame.image.save(screen.screen,"image.png")
     background=pygame.image.load("image.png")
     screen.screen.blit(background,(0,0))
+    add = 0
     while state["is_window_open"]:
         handle_user_events()
         screen.screen.blit(background, (0, 0))
         screen.draw_solider()
-
-        if state['night']:
+        if state['night'] and add == 0:
             screen.draw_night_window()
+            pygame.image.save(screen.screen, "image_night.png")
             time.sleep(1)
-            state['night'] =False
+            screen.screen.blit(background, (0, 0))
+            add += 1
+            pygame.display.update()
+            state['night'] = False
+        elif state['night'] and add != 0:
+            background_night = pygame.image.load("image_night.png")
+            screen.screen.blit(background_night, (0, 0))
+            screen.screen.blit(background_night, (0, 0))
+            pygame.display.update()
+            time.sleep(1)
             screen.screen.blit(background, (0, 0))
             pygame.display.update()
+            state['night'] = False
+
         pygame.display.update()
 
         if is_lose():
