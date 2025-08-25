@@ -5,20 +5,24 @@ import screen
 
 def create_field():
     game_field = []
-    row=[]
+
     for i in range (consts.SCREEN_GRID_START_ROWS):
+        row = []
         game_field.append(row)
         for j in range (consts.SCREEN_GRID_COLS):
-            row.append('o')
+            row.append(' ')
     return game_field
 
 
 def randon_mines(game_filed):
+    tuple_list=[]
     for i in range(consts.MINE_AMOUNT):
-        x = random.randint(0, consts.SCREEN_GRID_START_ROWS)
-        y = random.randint(0, consts.SCREEN_GRID_COLS)
-        game_filed[x][y]='x'
-        print(game_filed)
+        x = random.randint(0, consts.SCREEN_GRID_START_ROWS-1)
+        y = random.randint(0, consts.SCREEN_GRID_COLS-1)
+        tuple_list.append((x,y))
+
+
+    return tuple_list
 
     #    g = create_field()
    # x = random.randint(0,consts.WINDOW_WIDTH)
