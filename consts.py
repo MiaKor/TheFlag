@@ -35,6 +35,7 @@ SOLDIER_2 = pygame.image.load(os.path.join('bin','soldier (2).png'))
 GRASS=pygame.transform.scale(GRASS,(BUSH_WIDTH,BUSH_HEIGHT))
 SOLDIER=pygame.transform.scale(SOLDIER,(SOLDIER_WIDTH,SOLDIER_HEIGHT))
 FLAG=pygame.transform.scale(FLAG,(FLAG_WIDTH,FLAG_HEIGHT))
+SOLDIER_NIGHT=pygame.transform.scale(SOLDIER_NIGHT,(SOLDIER_WIDTH,SOLDIER_HEIGHT))
 
 REGULAR_BACKGROUND = (0, 77, 0)
 # REGULAR_BACKGROUND = (255, 255, 255)
