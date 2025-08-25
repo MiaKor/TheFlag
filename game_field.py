@@ -5,9 +5,11 @@ import screen
 
 def create_field():
     game_field = []
+    row=[]
     for i in range (consts.SCREEN_GRID_START_ROWS):
+        game_field.append(row)
         for j in range (consts.SCREEN_GRID_COLS):
-            game_field.append('o')
+            row.append('o')
     return game_field
 
 
