@@ -2,6 +2,8 @@ import consts
 import pygame
 import random
 
+import game_field
+
 pygame.init()
 screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 
@@ -23,6 +25,7 @@ def draw_night_window():
     for j in range(0,consts.WINDOW_HEIGHT,(consts.WINDOW_HEIGHT//consts.SCREEN_GRID_START_ROWS)):
         pygame.draw.line(screen, consts.LIGHT_GREEN, (0, j),(consts.WINDOW_WIDTH,j ),)
     screen.blit(consts.SOLDIER_NIGHT, (0, 0))
+    draw_mines(game_field.randon_mines())
     pygame.display.update()
 
 
@@ -33,3 +36,8 @@ def draw_flag():
 def draw_solider():
     screen.blit(consts.SOLDIER, (0, 0))
     pygame.display.update()
+
+def draw_mines(pos):
+    for i in pos:
+        screen.blit(consts.MINE, i)
+

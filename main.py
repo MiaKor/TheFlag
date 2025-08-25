@@ -8,21 +8,22 @@ import time
 state = {"state": consts.RUNNING_STATE, "is_window_open": True, 'night': False}
 
 
-grid = game_field.create_field()
-
-print(game_field.randon_mines(grid))
-
 def main():
     pygame.init()
     draw_board()
+
+    # board_png=pygame.image.save(,"image{}.png".format)
     while state["is_window_open"]:
 
         handle_user_events()
         if state['night']:
             screen.draw_night_window()
+
             time.sleep(1)
             state['night'] = False
             draw_board()
+
+
         if is_lose():
             state["state"] = consts.LOSE_STATE
         elif is_win():
