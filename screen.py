@@ -25,7 +25,7 @@ def draw_night_window():
         pygame.draw.line(screen, consts.LIGHT_GREEN,(i,0) ,(i,consts.WINDOW_HEIGHT) )
     for j in range(0,consts.WINDOW_HEIGHT,(consts.WINDOW_HEIGHT//consts.SCREEN_GRID_START_ROWS)):
         pygame.draw.line(screen, consts.LIGHT_GREEN, (0, j),(consts.WINDOW_WIDTH,j ),)
-    screen.blit(consts.SOLDIER_NIGHT, (0, 0))
+    screen.blit(consts.SOLDIER_NIGHT, (consts.SOLDIER_X,consts.SOLDIER_Y))
     draw_mines(game_field.randon_mines())
     pygame.display.update()
 
