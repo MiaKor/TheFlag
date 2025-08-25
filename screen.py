@@ -1,5 +1,3 @@
-from symtable import Class
-
 import consts
 import pygame
 import random
@@ -27,10 +25,11 @@ def draw_night_window():
     screen.blit(consts.SOLDIER_NIGHT, (0, 0))
     pygame.display.update()
 
-def draw_solider():
-    screen.blit(consts.SOLDIER, (0, 0))
-    pygame.display.update()
 
 def draw_flag():
     screen.blit(consts.FLAG,(consts.WINDOW_WIDTH-consts.FLAG_WIDTH,consts.WINDOW_HEIGHT-consts.FLAG_HEIGHT))
+    pygame.display.update()
+
+def draw_solider():
+    screen.blit(consts.SOLDIER, (0, 0))
     pygame.display.update()
