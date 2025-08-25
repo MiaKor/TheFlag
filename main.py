@@ -23,6 +23,8 @@ def main():
         if state['night'] and add == 0:
             screen.draw_night_window()
             pygame.image.save(screen.screen, "image_night.png")
+            screen.screen.blit(consts.SOLDIER_NIGHT,(consts.SOLDIER_X, consts.SOLDIER_Y))
+            pygame.display.update()
             time.sleep(1)
             screen.screen.blit(background, (0, 0))
             add += 1
@@ -31,7 +33,7 @@ def main():
         elif state['night'] and add != 0:
             background_night = pygame.image.load("image_night.png")
             screen.screen.blit(background_night, (0, 0))
-            screen.screen.blit(background_night, (0, 0))
+            screen.screen.blit(consts.SOLDIER_NIGHT,(consts.SOLDIER_X, consts.SOLDIER_Y))
             pygame.display.update()
             time.sleep(1)
             screen.screen.blit(background, (0, 0))
