@@ -34,8 +34,9 @@ def draw_flag():
     pygame.display.update()
 
 def draw_solider():
-    screen.blit(consts.SOLDIER, (0, 0))
-    pygame.display.update()
+    player = pygame.Rect(consts.SOLDIER_X, consts.SOLDIER_Y,
+                         consts.SOLDIER_WIDTH, consts.SOLDIER_HEIGHT)
+    screen.blit(consts.SOLDIER, player)
 
 def draw_mines(pos):
     for i in pos:

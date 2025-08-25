@@ -10,6 +10,7 @@ state = {"state": consts.RUNNING_STATE, "is_window_open": True, 'night': False}
 
 def main():
     pygame.init()
+    clock = pygame.time.Clock()
     draw_board()
     # soldier.soldier()
     pygame.image.save(screen.screen,"image.png")
@@ -17,20 +18,22 @@ def main():
     screen.screen.blit(background,(0,0))
     while state["is_window_open"]:
         handle_user_events()
+        screen.screen.blit(background, (0, 0))
         screen.draw_solider()
+
         if state['night']:
             screen.draw_night_window()
             time.sleep(1)
             state['night'] =False
             screen.screen.blit(background, (0, 0))
             pygame.display.update()
-
+        pygame.display.update()
 
         if is_lose():
             state["state"] = consts.LOSE_STATE
         elif is_win():
             state["state"] = consts.WIN_STATE
-    pygame.display.update()
+    clock.tick(60)
 
 
 def draw_board():
@@ -46,7 +49,6 @@ def handle_user_events():
             state["is_window_open"] = False
         elif state != consts.RUNNING_STATE:
             pass
-        keys = pygame.key.get_pressed()
         if event.type == pygame.KEYDOWN:
 
             if event.key == pygame.K_RETURN:
@@ -54,14 +56,15 @@ def handle_user_events():
             else:
                 state['night'] = False
 
-            # if event.key == pygame.K_UP:
-            #     soldier.soldier().y-=30
-            # elif event.key == pygame.K_DOWN:
-            #     soldier.soldier().y += 30
-            # elif event.key == pygame.K_RIGHT:
-            #     soldier.soldier().x -= 30
-            # elif event.key == pygame.K_LEFT:
-            #     soldier.soldier().x+=30
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_UP]:
+            consts.SOLDIER_Y -= 30
+        if keys[pygame.K_DOWN]:
+            consts.SOLDIER_Y += 30
+        if keys[pygame.K_LEFT]:
+            consts.SOLDIER_X -= 30
+        if keys[pygame.K_RIGHT]:
+            consts.SOLDIER_X += 30
 
 
 
