@@ -40,6 +40,9 @@ def main():
             pygame.display.update()
             state['night'] = False
 
+        soldier.collision()
+        if soldier.collision():
+            screen.screen.blit(consts.EXPLOSION, (consts.SOLDIER_X,consts.SOLDIER_Y))
         pygame.display.update()
 
         if is_lose():
