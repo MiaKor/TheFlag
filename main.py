@@ -16,13 +16,14 @@ def main():
     background=pygame.image.load("image.png")
     screen.screen.blit(background,(0,0))
     while state["is_window_open"]:
-
         handle_user_events()
+        screen.draw_solider()
         if state['night']:
             screen.draw_night_window()
             time.sleep(1)
             state['night'] =False
-            pygame.display.flip()
+            screen.screen.blit(background, (0, 0))
+            pygame.display.update()
 
 
         if is_lose():
@@ -53,14 +54,14 @@ def handle_user_events():
             else:
                 state['night'] = False
 
-            if event.key == pygame.K_UP:
-                soldier.soldier().y-=30
-            elif event.key == pygame.K_DOWN:
-                soldier.soldier().y += 30
-            elif event.key == pygame.K_RIGHT:
-                soldier.soldier().x -= 30
-            elif event.key == pygame.K_LEFT:
-                soldier.soldier().x+=30
+            # if event.key == pygame.K_UP:
+            #     soldier.soldier().y-=30
+            # elif event.key == pygame.K_DOWN:
+            #     soldier.soldier().y += 30
+            # elif event.key == pygame.K_RIGHT:
+            #     soldier.soldier().x -= 30
+            # elif event.key == pygame.K_LEFT:
+            #     soldier.soldier().x+=30
 
 
 
