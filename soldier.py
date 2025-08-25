@@ -1,12 +1,8 @@
 import pygame
-# def soldier():
-#
-#
-#
-#         # Create a box to put the arrow in, so that the rotation will be around
-#         # it's bottom (the box's center)
-#         soldier_box = pygame.Surface(,(30, 60))
-#         arrow_box.fill(consts.BACKGROUND_COLOR)
-#         arrow_box.blit(sized_arrow, (0, 0))
-#
-#         return arrow_box
+import consts
+import screen
+screen=screen.screen
+def soldier():
+    pygame.init()
+    player=pygame.Rect(150,150,consts.SOLDIER_WIDTH,consts.SOLDIER_HEIGHT)
+    pygame.draw.rect(screen,(0,0,0),player)
